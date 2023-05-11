@@ -6,6 +6,13 @@
   --brand-color5: #e7e9fc;
   --brand-color6: #f4f4fd;
   --brand-color7: #404bbf;
+
+  --icon-color1: #2e2f42;
+  --icon-color2: #4d5ae5;
+  --icon-color3: #8e8f99;
+  --icon-color4: #f4f4fd;
+
+  --brand-color-customer-link: #8e8f99;
   --brand-font-weight1: 800;
   --brand-font-weight2: 500;
   --brand-font-weight3: 700;
@@ -74,6 +81,8 @@ img {
   background: var(--brand-color1);
   /* CORNFLOWER */
   border-bottom: 1px solid var(--brand-color5);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-header-container {
   display: flex;
@@ -149,9 +158,9 @@ img {
 
 /* Hero Image  */
 .hero-dark-bg {
-  /* Dark-bg */
+  /* GREY */
 
-  background: var(--brand-color3);
+  background: rgba(46, 47, 66, 0.7);
   padding: 188px 0;
 }
 
@@ -159,13 +168,14 @@ img {
   width: 1440px;
   margin: 0 auto;
   background-image: linear-gradient(
-      rgba(21, 22, 22, 0.5),
-      rgba(21, 22, 22, 0.5)
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
     ),
     url("../images/people-office.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .image-hero-container {
@@ -275,23 +285,18 @@ img {
   margin-bottom: 72px;
 }
 
-.features-list-icon {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-}
-
 .features-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+  background-color: var(--brand-color5);
+  background-size: contain;
 }
 .features-icon {
-  width: 264px;
-  height: 112px;
-  background-color: var(--brand-color5);
+  width: 64px;
+  height: 64px;
+  margin: 24px 100px;
 }
 
 /* ================Section 2============ */
@@ -309,7 +314,7 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-/* Section 3 */
+/* =====================Section 3 ==========================  */
 .sect-three-light-bg {
   /* Light-bg */
   background-color: var(--brand-color6);
@@ -367,6 +372,37 @@ img {
   text-align: center;
 }
 
+.list-cards:hover,
+.list-cards:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+/* =============Section 4================= */
+.sect-four-container {
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+.customer-list {
+  display: flex;
+  gap: 24px;
+  justify-content: space-evenly;
+}
+
+.custom-link {
+  display: block;
+  width: 168px;
+  height: 88px;
+  /* LIGHT SLATE */
+
+  border: 1px solid var(--brand-color-customer-link);
+  border-radius: 4px;
+}
+.custom-icon {
+  width: 104px;
+  height: 56px;
+  margin: 16px 32px;
+}
 /* ==============Footer========================= */
 .foot-box {
   /* Footer */
@@ -390,6 +426,13 @@ img {
   letter-spacing: 0.02em;
   color: var(--brand-color6);
   line-height: 1.5;
+}
+
+.social-icon-footer {
+  display: flex;
+
+  width: 24px;
+  height: 24px;
 }
 
 /*  ===============Portfolio styles===============   */
@@ -428,6 +471,13 @@ img {
 .pr-cards {
   background: var(--brand-color1);
   width: calc((100% - 48px) / 3);
+}
+
+.pr-cards:hover,
+.pr-cards:focus {
+  border: 1px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .pr-cards-container {
@@ -506,26 +556,11 @@ img {
   color: var(--brand-color4);
 }
 
-/* =============Section 4================= */
-.sect-four-container {
-  padding-bottom: 120px;
-}
-
-.customer-list {
-  display: flex;
-  gap: 24px;
-  justify-content: space-evenly;
-}
-.custom-icon {
-  width: 168px;
-  height: 88px;
-  border: 2px solid #8e8f99;
-}
-
 /* ===============Social links===================== */
 .soc-media {
   color: var(--brand-color1);
   margin-bottom: 16px;
+  font-weight: var(--brand-font-weight2);
 }
 .social-list {
   display: flex;
@@ -535,15 +570,15 @@ img {
 .social-icon {
   display: flex;
 
-  width: 32px;
-  height: 32px;
+  width: 16px;
+  height: 16px;
 }
 .social-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: #404bbf;
+  background-color: var(--brand-color2);
 }
