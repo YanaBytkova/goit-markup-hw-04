@@ -11,6 +11,7 @@
   --icon-color2: #4d5ae5;
   --icon-color3: #8e8f99;
   --icon-color4: #f4f4fd;
+  --icon-hover2: #31d0aa;
 
   --brand-color-customer-link: #8e8f99;
   --brand-font-weight1: 800;
@@ -165,7 +166,7 @@ img {
 }
 
 .background {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -285,17 +286,17 @@ img {
   margin-bottom: 72px;
 }
 
-.features-link {
+.features-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  height: 112px;
   align-items: center;
   margin-bottom: 8px;
-  background-color: var(--brand-color5);
+  background-color: var(--brand-color6);
   background-size: contain;
+  border-radius: 4px;
 }
 .features-icon {
-  width: 64px;
-  height: 64px;
   margin: 24px 100px;
 }
 
@@ -361,7 +362,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .profession {
   height: 24px;
@@ -370,6 +371,32 @@ img {
   line-height: 1.5;
   color: var(--brand-color4);
   text-align: center;
+}
+/* ===============Social links===================== */
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin: 8px auto;
+  gap: 24px;
+}
+.social-icon {
+  display: flex;
+  fill: var(--brand-color6);
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--brand-color2);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--brand-color7);
 }
 
 .list-cards:hover,
@@ -382,26 +409,48 @@ img {
   padding-bottom: 120px;
   padding-top: 120px;
 }
-
+.header-two-cust {
+  /* Header 2 */
+  font-weight: var(--brand-font-weight3);
+  font-size: var(--brand-font-size4);
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--brand-color3);
+  margin-bottom: 72px;
+}
 .customer-list {
   display: flex;
   gap: 24px;
   justify-content: space-evenly;
 }
 
+.customer-list-item {
+}
+
 .custom-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 168px;
   height: 88px;
   /* LIGHT SLATE */
 
+  color: var(--brand-color-customer-link);
   border: 1px solid var(--brand-color-customer-link);
   border-radius: 4px;
 }
+
+.custom-link:hover,
+.custom-link:focus {
+  border-color: var(--brand-color7);
+  color: var(--brand-color7);
+}
+
 .custom-icon {
-  width: 104px;
-  height: 56px;
   margin: 16px 32px;
+  fill: currentColor;
 }
 /* ==============Footer========================= */
 .foot-box {
@@ -413,13 +462,18 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
   flex-direction: row;
-  gap: 120px;
+}
+
+.footer-container-one {
+  margin-right: 120px;
 }
 .logo {
   display: inline-block;
   margin-bottom: 16px;
 }
+
 .foot-text {
   /* Text */
   width: 264px;
@@ -428,13 +482,28 @@ img {
   line-height: 1.5;
 }
 
-.social-icon-footer {
-  display: flex;
-
-  width: 24px;
-  height: 24px;
+.soc-media {
+  color: var(--brand-color1);
+  margin-bottom: 16px;
+  font-weight: var(--brand-font-weight2);
 }
 
+.social-icon-footer {
+  display: flex;
+  fill: var(--brand-color6);
+}
+
+.social-list-foot {
+  display: flex;
+  justify-content: center;
+  margin: 8px auto;
+  gap: 16px;
+}
+
+.list-item-foot .social-link:hover,
+.list-item-foot .social-link:focus {
+  background-color: var(--icon-hover2);
+}
 /*  ===============Portfolio styles===============   */
 
 .buttons-container {
@@ -473,9 +542,12 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.pr-cards:hover,
-.pr-cards:focus {
-  border: 1px solid #f4f4fd;
+.pr-card-link {
+  display: block;
+}
+.pr-card-link:hover,
+.pr-card-link:focus {
+  border: 1px solid var(--brand-color6);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -554,31 +626,4 @@ img {
   font-size: var(--brand-font-size1);
   line-height: 1.5;
   color: var(--brand-color4);
-}
-
-/* ===============Social links===================== */
-.soc-media {
-  color: var(--brand-color1);
-  margin-bottom: 16px;
-  font-weight: var(--brand-font-weight2);
-}
-.social-list {
-  display: flex;
-  margin: 8px auto;
-  gap: 24px;
-}
-.social-icon {
-  display: flex;
-
-  width: 16px;
-  height: 16px;
-}
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--brand-color2);
 }
