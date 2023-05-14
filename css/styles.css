@@ -486,6 +486,8 @@ img {
   color: var(--brand-color1);
   margin-bottom: 16px;
   font-weight: var(--brand-font-weight2);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 .social-icon-footer {
